@@ -1,133 +1,187 @@
+/*
+    © Copyright : Dimitri Chassignol (edit/create)
+*/
+
+
+
+/* Style de base pour le corps du document */
 body {
+    height: 100vh; /* 100% de la hauteur de l'écran */
     margin: 0;
     font-family: 'Share Tech', sans-serif;
     font-size: 16px;
-    color: #505050; /* Couleur textes autre que principal*/
+    color: #505050; /* Couleur du texte autre que principal */
     background: #eee;
-    overflow-x: hidden; /* Si je veux mettre des choses en dessous */ 
+    overflow-x: hidden; /* Masquer la barre de défilement horizontale */
 }
 
-main { /* De façon à bien centrer le bloc "Profil Personnel"*/ 
+/* Style pour la section principale du contenu */
+main {
     position: relative;
     padding: 7vh 0 10vh;
     opacity: 0;
     margin-top: -5px;
 }
 
+/* Media query pour les écrans larges */
 @media all and (min-width: 670px) {
     main {
         width: 570px;
-        margin-left: calc(50vw - 285px); /* Center the main content */
+        margin-left: calc(50vw - 285px); /* Centrer le contenu principal */
     }
 }
 
+/* Media query pour les écrans étroits */
 @media all and (max-width: 670px) {
     main {
         margin: 0 15px;
     }
 }
 
-
+/* Style pour les titres h1 et h2 */
 h1, h2 {
-    position:relative;
-    display:flex;
-    align-items:center;
-    font-family:'Share Tech Mono', monospace; /* Au cas ou ça ne trouve pas la police ça met "monospace" */
+    position: relative;
+    display: flex;
+    align-items: center;
+    font-family: 'Share Tech Mono', monospace;
     line-height: 1em;
-    word-spacing:-.1em;
-    letter-spacing:-.05em;
-    transition:.2s all ease;
-    margin-left:10px;
-    margin-bottom:15px;
+    word-spacing: -.1em;
+    letter-spacing: -.05em;
+    transition: .2s all ease;
+    margin-left: 10px;
+    margin-bottom: 15px;
 }
 
-h1 span, h2 span { 
-    background:rgba(238,238,238,.7);
-    padding:5px 7px;
-    border-radius:10px;
-    box-sizing:border-box;
+/* Style pour le fond des spans dans h1 et h2 */
+h1 span, h2 span {
+    background: rgba(238, 238, 238, .7);
+    padding: 5px 7px;
+    border-radius: 10px;
+    box-sizing: border-box;
 }
-h1, h2:active { color:rgb(28, 115, 186); }
-h1 { font-size:2.2em } 
-h2 { cursor:pointer }
-p:first-child { margin-top:0 }
-p:last-child { margin-bottom:0 }
 
-.subtext { /* Bloc */ 
-    position:relative;
-    border-radius:10px;
+/* Style pour les interactions actives sur h1 et h2 */
+h1, h2:active {
+    color: rgb(28, 115, 186);
+}
+
+/* Style spécifique pour h1 */
+h1 {
+    font-size: 2.2em;
+}
+
+/* Style spécifique pour h2 avec curseur indiquant l'interaction */
+h2 {
+    cursor: pointer;
+}
+
+/* Style pour les premiers paragraphes dans les blocs de texte */
+p:first-child {
+    margin-top: 0;
+}
+
+/* Style pour les derniers paragraphes dans les blocs de texte */
+p:last-child {
+    margin-bottom: 0;
+}
+
+/* Style pour les blocs de texte */
+.subtext {
+    position: relative;
+    border-radius: 10px;
     background: white;
-    border:1px solid;
-    padding:13px;
-    line-height:1.5em;
+    border: 1px solid;
+    padding: 13px;
+    line-height: 1.5em;
 }
 
-.subtext:not(#main) { /* Pour les fermer tous les bloc de base */ 
-    display:none;
+/* Style pour cacher tous les blocs de texte sauf celui avec l'id "main" */
+.subtext:not(#main) {
+    display: none;
 }
 
-.subtext ul { margin:0; padding:0 25px; } /* Repositioner le "Autre Contact" vu que il n'a pas bcp de txt */
-
-.subtext a { /* Lien HyperText */ 
-    color:#0a9; 
-    text-decoration:underline;
-    cursor:pointer;
-    transition:.2s all ease;
+/* Style pour les listes à l'intérieur des blocs de texte */
+.subtext ul {
+    margin: 0;
+    padding: 0 25px;
 }
 
-.subtext a:hover, h2:hover { /* Pseudo-element pour passer notre souris dessus */
+/* Style pour les liens hypertexte dans les blocs de texte */
+.subtext a {
+    color: #0a9;
+    text-decoration: underline;
+    cursor: pointer;
+    transition: .2s all ease;
+}
+
+/* Style pour les survols de liens et de titres h2 */
+.subtext a:hover, h2:hover {
     color: #777;
 }
 
-.subtext:before { /* Le petit trait qui relie l'hexa au bloc quand on clique dessus */
-    content:'';
-    position:absolute;
-    width:1px;
-    background:#bbb;
-    left:1.2em;
-    height:1.2em;
-    top:calc(-1.2em - 1px);
+/* Style pour le trait qui relie l'hexagone au bloc de texte */
+.subtext:before {
+    content: '';
+    position: absolute;
+    width: 1px;
+    background: #bbb;
+    left: 1.2em;
+    height: 1.2em;
+    top: calc(-1.2em - 1px);
 }
 
-.subtext.coll:before { /* Bien centrer le petit trait */ 
-    left:1em;
-    height:1.2em;
-    top:calc(-1.2em - 1px);
+/* Style pour centrer le trait lorsque le bloc est fermé */
+.subtext.coll:before {
+    left: 1em;
+    height: 1.2em;
+    top: calc(-1.2em - 1px);
 }
 
-.hex:hover { /* Petite rotation de l'hexa quand on clique dessus */ 
-    transform:rotate(30deg);
+/* Style pour la rotation de l'hexagone lors du survol */
+.hex:hover {
+    transform: rotate(30deg);
 }
 
+/* Styles pour l'hexagone et ses parties */
 .hex, .hex:before, .hex:after {
-    height:1em;
-    width:.59em;
-    border:solid;
-    border-width:1px 0;
-    border-radius:2px;
-    box-sizing:border-box;
+    height: 1em;
+    width: .59em;
+    border: solid;
+    border-width: 1px 0;
+    border-radius: 2px;
+    box-sizing: border-box;
 }
 
-main .hex { /* Séparation entre le bloc et l'hexa */ 
+/* Style pour la séparation entre le bloc et l'hexagone */
+main .hex {
     position: relative;
-    display:inline-block;
-    margin-right:.5em;
-    transition:.4s all ease;
+    display: inline-block;
+    margin-right: .5em;
+    transition: .4s all ease;
 }
 
-.hex:before, .hex:after { /* Initialisation des deux pseudos */ 
-    content:'';
-    position:absolute;
-    margin-top:-1px;
+/* Styles pour les parties de l'hexagone */
+.hex:before, .hex:after {
+    content: '';
+    position: absolute;
+    margin-top: -1px;
 }
 
-.hex:before { transform:rotate(60deg); } /* En bas */
-.hex:after { transform:rotate(-60deg); } /* En haut */ 
+/* Styles pour la rotation des parties de l'hexagone */
+.hex:before {
+    transform: rotate(60deg);
+}
 
+.hex:after {
+    transform: rotate(-60deg);
+}
+
+/* Styles pour la couleur des contours du bloc et de l'hexagone */
 .hex, .hex:before, .hex:after, .subtext {
-    border-color:#bbb; /* Couleur des contours du bloc et de l'hexa */
+    border-color: #bbb;
 }
 
+/* Style pour la rotation spécifique de l'hexagone */
 .hex.moved {
-    transform:rotate(30deg); /* Rotation de l'hexa */
+    transform: rotate(30deg);
 }
