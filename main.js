@@ -1,6 +1,6 @@
 /* 
     Script jQuery.js pris sur CODEPEN (create)
-    Dimitri Chassignol (edit)
+    2024 - Dimitri Chassignol (edit)
 
 */
 
