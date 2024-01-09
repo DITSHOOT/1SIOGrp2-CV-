@@ -14,7 +14,7 @@ Hello, voici mon projet HTML/CSS dynamique ! Explorez mes compétences, et plong
 ## Aperçu du PROJET
 
 
-[![Projet : Centre de Formation Saint-Etienne (CFAI)](./preview.png)](https://ditshoot.github.io/1SIOGrp2-CV-/)
+[![Projet : Centre de Formation Saint-Etienne (CFAI)](./preview.png)](https://www.votre-site.com){:target="_blank"}
 
 ## Technologies utilisées
 
