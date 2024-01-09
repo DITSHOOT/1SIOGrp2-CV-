@@ -1,68 +1,143 @@
-
-<!DOCTYPE html>
+<!-- Déclaration de type de document HTML -->
 <html lang="fr">
+
+<!-- 
+    © Copyright : Dimitri Chassignol (edit/create)
+-->
+
 <head>
+    <!-- Métadonnées du document -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="CV - SIOBTSGrp2">
+
+    <!-- Inclusion de jQuery -->
     <script src="https://code.jquery.com/jquery-2.2.4.min.js" crossorigin="anonymous"></script>
-    <link href="https://fonts.googleapis.com/css?family=Share+Tech|Share+Tech+Mono" rel="stylesheet"/>
+
+    <!-- Lien vers les polices Google -->
+    <link href="https://fonts.googleapis.com/css?family=Share+Tech|Share+Tech+Mono" rel="stylesheet">
+
+    <!-- Titre de la page -->
     <title>Dimitri Chassignol - CV</title>
 
-        <!-- Ajoutez la ligne suivante pour l'icône de l'onglet -->
-        <link rel="icon" href="title_logo.png" type="image/x-icon">
+    <!-- Ajout de l'icône pour l'onglet -->
+    <link rel="icon" href="title_logo.png" type="image/x-icon">
 
-        <!-- Si vous souhaitez également spécifier une icône pour les appareils mobiles, vous pouvez ajouter cette ligne -->
-        <link rel="apple-touch-icon" href="title_logo.png">
+    <!-- Spécification de l'icône pour les appareils mobiles -->
+    <link rel="apple-touch-icon" href="title_logo.png">
 
-
+    <!-- Lien vers la feuille de style CSS -->
     <link rel="stylesheet" href="style.css">
+
+    <!-- Inclusion du script JavaScript principal -->
     <script src="main.js"></script>
 </head>
-<body onload="draw()">
 
+<body onload="draw()">
+    <!-- Corps du document -->
+
+    <!-- Contenu principal -->
     <main id="content">
+
+        <!-- Titre principal -->
         <h1>
-            <div class="hex moved"></div><span>PROFIL PERSONNEL</span></h1>
-        <div class="subtext" id="main"> <!-- le carré blanc & ce qui a ouvert de base -->
+            <!-- Hexagone animé -->
+            <div class="hex moved"></div>
+            <!-- Texte du titre -->
+            <span>PROFIL PERSONNEL</span>
+        </h1>
+
+        <!-- Bloc de texte principal -->
+        <div class="subtext" id="main">
+            <!-- Contenu du bloc -->
             <p>En tant qu'explorateur des mystères de l'informatique, avide d'apprendre, de créer et de relever des défis, je suis fermement persuadé que la sécurité informatique et la gestion des réseaux constituent le terrain privilégié pour concrétiser ces passions. Mon nom est Dimitri Chassignol, étudiant autodidacte déterminé à approfondir mes connaissances dans ces domaines afin d'atteindre de nouveaux sommets.</p>
+            <!-- Paragraphe vide (à supprimer ou remplir) -->
             <p></p>
         </div>
+
+        <!-- Titre de section avec hexagone -->
         <h2>
-            <div class="hex"></div><span>Compétences</span></h2> <!-- hexagone -->
-        <div class="subtext coll"> <!-- Reli du trait bien au centre -->
+            <!-- Hexagone -->
+            <div class="hex"></div>
+            <!-- Texte de la section -->
+            <span>Compétences</span>
+        </h2>
+
+        <!-- Bloc de texte de la section "Compétences" -->
+        <div class="subtext coll">
+            <!-- Liste des compétences -->
             - Installation et configuration de logiciels<br>
             - Mise à jour des logiciels<br>
             - Gestion des incidents et demandes utilisateur<br>
             - Gestion des comptes AD (création de compte, ajout de droits, réinitialisation de mot de passe)
         </div>
+
+        <!-- Titre de section avec hexagone -->
         <h2>
-            <div class="hex"></div><span>Hobbies & Centre d'intérêt</span></h2>
+            <!-- Hexagone -->
+            <div class="hex"></div>
+            <!-- Texte de la section -->
+            <span>Hobbies & Centre d'intérêt</span>
+        </h2>
+
+        <!-- Bloc de texte de la section "Hobbies & Centre d'intérêt" -->
         <div class="subtext coll">
+            <!-- Liste des hobbies et centres d'intérêt -->
             Gaming / Sport / Passionné d'animaux.
         </div>
+
+        <!-- Titre de section avec hexagone -->
         <h2>
-            <div class="hex"></div><span>Je travaille...</span></h2>
+            <!-- Hexagone -->
+            <div class="hex"></div>
+            <!-- Texte de la section -->
+            <span>Je travaille...</span>
+        </h2>
+
+        <!-- Bloc de texte de la section "Je travaille..." -->
         <div class="subtext coll">
+            <!-- Description du travail en tant qu'apprenti -->
             chez <a href="https://www.elsan.care" target="_blank">ELSAN</a> sur les 4 cliniques de la Loire et Haute-Loire en tant qu'apprenti.
         </div>
-        
+
+        <!-- Titre de section avec hexagone -->
         <h2>
-            <div class="hex"></div><span>Vous pouvez me trouver sur...</span></h2>
+            <!-- Hexagone -->
+            <div class="hex"></div>
+            <!-- Texte de la section -->
+            <span>Vous pouvez me trouver sur...</span>
+        </h2>
+
+        <!-- Bloc de texte de la section "Vous pouvez me trouver sur..." -->
         <div class="subtext coll">
+            <!-- Liens vers les réseaux sociaux -->
             <a href="https://twitter.com/DITSHOOT" target="_blank">Twitter</a> | <a href="https://www.instagram.com/ditshoot_/" target="_blank">Instagram</a> | <a href="https://www.linkedin.com/in/dimitrichassignol/" target="_blank">Linkedin</a> | <a href="https://github.com/DITSHOOT" target="_blank">Github</a>
         </div>
-        
+
+        <!-- Titre de section avec hexagone -->
         <h2>
-            <div class="hex"></div><span>Autre Contact</span></h2>
+            <!-- Hexagone -->
+            <div class="hex"></div>
+            <!-- Texte de la section -->
+            <span>Autre Contact</span>
+        </h2>
+
+        <!-- Bloc de texte de la section "Autre Contact" -->
         <div class="subtext coll">
+            <!-- Liste de contacts -->
             <ul>
+                <!-- Numéro de téléphone -->
                 <li>Tel : <a href="tel:+33780057323">0780057323</a></li>
+                <!-- Adresse e-mail professionnelle -->
                 <li>Contact Pro : <a href="mailto:contact@dimitrichassignol.fr">contact@dimitrichassignol.fr</a></li>
-                <li>Others Contact : <a href="https://contact.dimitrichassignol.fr" target="_blank">contact.dimitrichassignol.fr</a></li><li>Curriculum vitae : <a href="https://cv.dimitrichassignol.fr" target="_blank">cv.dimitrichassignol.fr</a></li>
+                <!-- Autres contacts avec liens -->
+                <li>Others Contact : <a href="https://contact.dimitrichassignol.fr" target="_blank">contact.dimitrichassignol.fr</a></li>
+                <!-- Lien vers le curriculum vitae -->
+                <li>Curriculum vitae : <a href="https://cv.dimitrichassignol.fr" target="_blank">cv.dimitrichassignol.fr</a></li>
             </ul>
-            
         </div>
     </main>
 
 </body>
+
 </html>
